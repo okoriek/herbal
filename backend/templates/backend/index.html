@@ -1,7 +1,448 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}
 
 {% endblock %}
 {% block body %}
+  <!-- tg-banner-area -->
+  <section class="tg-banner-area banner-bg jarallax parallax-img" id="home">
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-xl-6 col-lg-6 order-0 order-lg-2">
+          <div class="tg-banner-img text-center wow fadeInRight" data-wow-delay=".6s">
+            <img src="{% static 'assets/img/banner/hero.png' %}" alt="img" />
+          </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-10">
+          <div class="tg-banner-content">
+            <h4 class="sub-title wow fadeInUp" data-wow-delay=".2s">Natural Energy Boost!</h4>
+            <h2 class="title wow fadeInUp" data-wow-delay=".4s">Healing Rooted<br /> in Nature</h2>
+            <p class="wow fadeInUp" data-wow-delay=".6s">Discover pure herbal remedies crafted to restore balance, vitality, and wellness.</p>
+            <div class="tg-banner-btn wow fadeInUp" data-wow-delay=".8s">
+              <a href="shop-details.html" class="tg-btn">purchase now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- banner-area-end -->
 
+  <!-- tg-features-area -->
+  <section class="tg-features-area">
+    <div class="container">
+      <div class="tg-features-inner">
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-md-6 col-sm-8 wow fadeInUp" data-wow-delay=".2s">
+            <div class="tg-features-item">
+              <div class="tg-features-icon">
+                <i class="flaticon-supplement"></i>
+              </div>
+              <div class="tg-features-content">
+                <h4 class="title">Rooted in Healing</h4>
+                <p>Powerful herbal solutions made from nature’s finest plants to enhance daily health.</p>
+                <a href="#">Learn more</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-8 wow fadeInUp" data-wow-delay=".4s">
+            <div class="tg-features-item">
+              <div class="tg-features-icon">
+                <i class="flaticon-whey-protein-3"></i>
+              </div>
+              <div class="tg-features-content">
+                <h4 class="title">Green Energy Boost</h4>
+                <p>Herbal extracts that revitalize your system, helping you stay active and refreshed naturally.</p>
+                <a href="#">Learn more</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-8 wow fadeInUp" data-wow-delay=".6s">
+            <div class="tg-features-item">
+              <div class="tg-features-icon">
+                <i class="flaticon-strong-1"></i>
+              </div>
+              <div class="tg-features-content">
+                <h4 class="title">Herbal Vitality</h4>
+                <p>A natural blend of herbs formulated to restore energy and promote overall wellness.</p>
+                <a href="#">Learn more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- tg-features-area-end -->
+
+  <!-- supplement-area -->
+  <section id="ingredient" class="tg-supplement-area pt-130 pb-120">
+    <div class="tg-supplement-bg"></div>
+    <div class="container">
+      <div class="tg-supplement-inner">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 col-md-8 order-0 order-lg-2">
+            <div class="tg-supplement-img text-end wow fadeInRight" data-wow-delay=".2s">
+              <img src="{% static 'assets/img/others/ingredent.png' %}" alt="" />
+            </div>
+            <div class="tg-supplement-shape">
+              <img src="{% static 'assets/img/others/supplement_shape02.png' %}" alt="" class="rotateme" />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="tg-supplement-content mt-60 wow fadeInLeft" data-wow-delay=".2s">
+              <div class="tg-section-title mb-25">
+                <span class="sub-title">ingredients</span>
+                <h2 class="title">Immunity Support</h2>
+              </div>
+              <p>Herbal formulas are carefully crafted with natural ingredients that work in harmony with your body to build resilience against everyday challenges. Rich in antioxidants, vitamins, and immune-boosting compounds, these herbs help your system fight infections, reduce fatigue, and maintain balance</p>
+              <a href="shop.html" class="tg-btn view-btn">VIEW more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- supplement-area-end -->
+
+  <!-- video-area -->
+  <section class="tg-video-area tg-video-bg jarallax parallax-img">
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-xl-7 col-lg-8">
+          <div class="tg-video-img wow fadeInLeft" data-wow-delay=".2s">
+            <img src="{% static 'assets/img/others/video_img.jpg' %}" alt="" />
+            <a href="#" class="play-btn popup-video"><i class="fas fa-play"></i></a>
+          </div>
+        </div>
+        <div class="col-xl-5 col-lg-8">
+          <div class="tg-video-content wow fadeInRight" data-wow-delay=".2s">
+            <div class="tg-section-title white mb-30">
+              <span class="sub-title">Herbal Care</span>
+              <h2 class="title white-text">How Our Herbal Tonic Works</h2>
+            </div>
+            <p class="info-one">Our herbal tonic is carefully blended with natural roots and leaves to support overall wellness. It nourishes the body, balances energy, and helps maintain a healthy lifestyle.</p>
+            <p class="info-two">Made from 100% organic ingredients, it promotes vitality, strengthens the immune system, and provides gentle relief without harmful side effects.</p>
+            <a href="#" class="tg-btn">Discover More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- video-area-end -->
+
+  <!-- tg-shop-area -->
+  <section id="supplement" class="tg-shop-area pt-100 pb-60">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="tg-section-title text-center mb-60">
+            <span class="sub-title">RECENT PRODUCTS</span>
+            <h2 class="title">HERBAL PRODUCT</h2>
+          </div>
+        </div>
+      </div>
+      <div class="tg-shop-wrapper">
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-md-6 col-sm-9">
+            <div class="tg-shop-item text-center">
+              <div class="tg-shop-thumb">
+                <span class="new">New</span>
+                <a href="shop-details.html"><img src="{% static 'assets/img/products/cancer.png' %}" alt="img" /></a>
+                <div class="tg-shop-action">
+                  <a href="shop-details.html" class="action-item"><i class="far fa-heart"></i></a>
+                  <a href="cart.html" class="action-item"><i class="flaticon-shopping-cart-1"></i></a>
+                  <a href="shop-details.html" class="action-item"><i class="flaticon-search"></i></a>
+                </div>
+              </div>
+              <div class="tg-shop-content">
+                <div class="tg-shop-cat">
+                  <a href="shop.html">Herbal Care</a>
+                </div>
+                <h4 class="title"><a href="shop-details.html">Herbal Cancer Cure</a></h4>
+                <div class="tg-shop-price">$24.99</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-9">
+            <div class="tg-shop-item text-center">
+              <div class="tg-shop-thumb">
+                <span class="discount">-45%</span>
+                <a href="shop-details.html"><img src="{% static 'assets/img/products/diabetes.png' %}" alt="img" /></a>
+                <div class="tg-shop-action">
+                  <a href="shop-details.html" class="action-item"><i class="far fa-heart"></i></a>
+                  <a href="cart.html" class="action-item"><i class="flaticon-shopping-cart-1"></i></a>
+                  <a href="shop-details.html" class="action-item"><i class="flaticon-search"></i></a>
+                </div>
+              </div>
+              <div class="tg-shop-content">
+                <div class="tg-shop-cat">
+                  <a href="shop.html">Herbal Care</a>
+                </div>
+                <h4 class="title"><a href="shop-details.html">Herbal Diabetes Cure</a></h4>
+                <div class="tg-shop-price">$24.99</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-9">
+            <div class="tg-shop-item text-center">
+              <div class="tg-shop-thumb">
+                <a href="shop-details.html"><img src="{% static 'assets/img/products/erectile.png' %}" alt="img" /></a>
+                <div class="tg-shop-action">
+                  <a href="shop-details.html" class="action-item"><i class="far fa-heart"></i></a>
+                  <a href="cart.html" class="action-item"><i class="flaticon-shopping-cart-1"></i></a>
+                  <a href="shop-details.html" class="action-item"><i class="flaticon-search"></i></a>
+                </div>
+              </div>
+              <div class="tg-shop-content">
+                <div class="tg-shop-cat">
+                  <a href="shop.html">Herbal Care</a>
+                </div>
+                <h4 class="title"><a href="shop-details.html">Erectile Dysfunction</a></h4>
+                <div class="tg-shop-price">$24.99</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-9">
+            <div class="tg-shop-item text-center">
+              <div class="tg-shop-thumb">
+                <span class="discount">-45%</span>
+                <a href="shop-details.html"><img src="{% static 'assets/img/products/hpv.png' %}" alt="img" /></a>
+                <div class="tg-shop-action">
+                  <a href="shop-details.html" class="action-item"><i class="far fa-heart"></i></a>
+                  <a href="cart.html" class="action-item"><i class="flaticon-shopping-cart-1"></i></a>
+                  <a href="shop-details.html" class="action-item"><i class="flaticon-search"></i></a>
+                </div>
+              </div>
+              <div class="tg-shop-content">
+                <div class="tg-shop-cat">
+                  <a href="shop.html">Herbal Care</a>
+                </div>
+                <h4 class="title"><a href="shop-details.html">HPV Herbal Cure</a></h4>
+                <div class="tg-shop-price">$24.99</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-9">
+            <div class="tg-shop-item text-center">
+              <div class="tg-shop-thumb">
+                <a href="shop-details.html"><img src="{% static 'assets/img/products/staph.png' %}" alt="img" /></a>
+                <div class="tg-shop-action">
+                  <a href="shop-details.html" class="action-item"><i class="far fa-heart"></i></a>
+                  <a href="cart.html" class="action-item"><i class="flaticon-shopping-cart-1"></i></a>
+                  <a href="shop-details.html" class="action-item"><i class="flaticon-search"></i></a>
+                </div>
+              </div>
+              <div class="tg-shop-content">
+                <div class="tg-shop-cat">
+                  <a href="shop.html">Herbal Care</a>
+                </div>
+                <h4 class="title"><a href="shop-details.html">Staph Bacteria</a></h4>
+                <div class="tg-shop-price">$24.99</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-9">
+            <div class="tg-shop-item text-center">
+              <div class="tg-shop-thumb">
+                <span class="new">New</span>
+                <a href="shop-details.html"><img src="{% static 'assets/img/products/staph_2.png' %}" alt="img" /></a>
+                <div class="tg-shop-action">
+                  <a href="shop-details.html" class="action-item"><i class="far fa-heart"></i></a>
+                  <a href="cart.html" class="action-item"><i class="flaticon-shopping-cart-1"></i></a>
+                  <a href="shop-details.html" class="action-item"><i class="flaticon-search"></i></a>
+                </div>
+              </div>
+              <div class="tg-shop-content">
+                <div class="tg-shop-cat">
+                  <a href="shop.html">Herbal Care</a>
+                </div>
+                <h4 class="title"><a href="shop-details.html">Staph Bacteria Cure</a></h4>
+                <div class="tg-shop-price">$24.99</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- tg-shop-area-end -->
+
+  <!-- service-area -->
+  <section id="feature" class="tg-service-area">
+    <div class="container">
+      <div class="tg-service-inner">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="tg-section-title text-center mb-60">
+              <span class="sub-title">Features</span>
+              <h2 class="title">Herbal Features</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-md-6 col-sm-9">
+            <div class="tg-service-item">
+              <div class="tg-services-count">01</div>
+              <div class="icon">
+                <i class="flaticon-vitamins-1"></i>
+              </div>
+              <h2 class="title"><a href="#">Immune Support</a></h2>
+              <div class="tg-service-content">
+                <p>Strengthens your body’s natural defenses with herbs that promote vitality and resistance to illness.</p>
+                <a href="#"><i class="fas fa-arrow-circle-right"></i> Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-9">
+            <div class="tg-service-item">
+              <div class="tg-services-count">02</div>
+              <div class="icon">
+                <i class="flaticon-supplement"></i>
+              </div>
+              <h2 class="title"><a href="#">Natural Detox</a></h2>
+              <div class="tg-service-content">
+                <p>Helps cleanse toxins and support liver function using time-tested herbal formulations.</p>
+                <a href="#"><i class="fas fa-arrow-circle-right"></i> Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-9">
+            <div class="tg-service-item">
+              <div class="tg-services-count">03</div>
+              <div class="icon">
+                <i class="flaticon-vitamins"></i>
+              </div>
+              <h2 class="title"><a href="#">Digestive Balance</a></h2>
+              <div class="tg-service-content">
+                <p>Promotes healthy digestion and relieves bloating with natural teas and herbal remedies.</p>
+                <a href="#"><i class="fas fa-arrow-circle-right"></i> Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-9">
+            <div class="tg-service-item">
+              <div class="tg-services-count">04</div>
+              <div class="icon">
+                <i class="flaticon-protein-2"></i>
+              </div>
+              <h2 class="title"><a href="#">Stress Relief</a></h2>
+              <div class="tg-service-content">
+                <p>Calming herbal blends to reduce anxiety, improve sleep, and restore emotional balance.</p>
+                <a href="#"><i class="fas fa-arrow-circle-right"></i> Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-9">
+            <div class="tg-service-item">
+              <div class="tg-services-count">05</div>
+              <div class="icon">
+                <i class="flaticon-tape-measure"></i>
+              </div>
+              <h2 class="title"><a href="#">Energy & Vitality</a></h2>
+              <div class="tg-service-content">
+                <p>Boosts stamina and revitalizes the body naturally with ginseng, moringa, and other super herbs.</p>
+                <a href="#"><i class="fas fa-arrow-circle-right"></i> Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-9">
+            <div class="tg-service-item">
+              <div class="tg-services-count">06</div>
+              <div class="icon">
+                <i class="flaticon-abs-1"></i>
+              </div>
+              <h2 class="title"><a href="#">Skin & Beauty</a></h2>
+              <div class="tg-service-content">
+                <p>Herbal care for radiant skin, slowing signs of aging, and restoring natural glow from within.</p>
+                <a href="#"><i class="fas fa-arrow-circle-right"></i> Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- service-area-end -->
+
+  <!-- testimonial-area -->
+  <section id="testimonies" class="tg-testimonial-area tg-testimonial-bg jarallax parallax-img">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="tg-section-title white text-center mb-60">
+            <span class="sub-title">User Experience</span>
+            <h2 class="title white-text">recommended by users</h2>
+          </div>
+        </div>
+      </div>
+
+      <!-- Horizontal scroll wrapper -->
+      <div class="testimonial-scroll-wrapper">
+        <div class="testimonial-scroll">
+          <div class="tg-testimonial-item">
+            <div class="tg-testimonial-content">
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <h2 class="title">I Use It Everyday</h2>
+              <p>“Since I started taking these herbs, my energy levels have improved a lot. I feel more balanced and less tired during the day.”</p>
+              <p class="tg-testi-avatar-info">
+                Sarah M. · <span>3 days ago</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="tg-testimonial-item">
+            <div class="tg-testimonial-content">
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <h2 class="title">100% Natural & Effective</h2>
+              <p>“I love that everything is organic. I’ve had fewer headaches and my digestion feels so much better.”</p>
+              <p class="tg-testi-avatar-info">
+                David K. · <span>1 week ago</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="tg-testimonial-item">
+            <div class="tg-testimonial-content">
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <h2 class="title">Great Herbal Quality</h2>
+              <p>“The difference is noticeable. The herbs taste fresh and pure compared to other products I’ve tried before.”</p>
+              <p class="tg-testi-avatar-info">
+                Anita L. · <span>2 weeks ago</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="tg-testimonial-item">
+            <div class="tg-testimonial-content">
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <h2 class="title">I Recommend It</h2>
+              <p>“I started with one product and now I use almost the full range. My sleep has improved and I feel healthier overall.”</p>
+              <p class="tg-testi-avatar-info">
+                James O. · <span>1 month ago</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- testimonial-area-end -->
 {% endblock %}

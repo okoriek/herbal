@@ -7550,3 +7550,29 @@ body.search-visible {
     text-decoration: underline;
 }
 
+
+
+/* custom adjustment */
+
+.testimonial-scroll-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+.testimonial-scroll-wrapper::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.testimonial-scroll {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 15px;
+}
+
+.tg-testimonial-item {
+  max-width: 300px; /* adjust width as needed */
+  flex: 0 0 auto;
+}
+
+
