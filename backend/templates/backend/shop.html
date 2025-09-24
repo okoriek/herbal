@@ -5,5 +5,41 @@
 {% endblock %}
 
 {% block body %}
-
+  <section id="supplement" class="tg-shop-area pt-100 pb-60">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="tg-section-title text-center mb-60">
+            <span class="sub-title">RECENT PRODUCTS</span>
+            <h2 class="title">HERBAL PRODUCT</h2>
+          </div>
+        </div>
+      </div>
+      <div class="tg-shop-wrapper">
+        <div class="row justify-content-center">
+          {% for item in items %}
+            <div class="col-lg-4 col-md-6 col-sm-9">
+              <div class="tg-shop-item text-center">
+                <div class="tg-shop-thumb">
+                  <span class="new">New</span>
+                  <a href="#"><img src="{{ item.product_image.url }}" alt="img" /></a>
+                  <div class="tg-shop-action">
+                    <a href="{% url 'backend:add_to_cart' item.pk %}" class="action-item"><i class="flaticon-shopping-cart-1"></i></a>
+                  </div>
+                </div>
+                <div class="tg-shop-content">
+                  <div class="tg-shop-cat">
+                    <a href="shop.html">Herbal Care</a>
+                  </div>
+                  <h4 class="title"><a href="#">{{ item.name }}</a></h4>
+                  <div class="tg-shop-price">${{ item.price }}</div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- tg-shop-area-end -->
 {% endblock %}

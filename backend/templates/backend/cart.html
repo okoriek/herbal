@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block tittle %}
+
+{% endblock %}
+
+{% block body %}
+  <!-- main-area -->
+  <main class="main-area fix">
+    <!-- cart-area -->
+    <div class="cart__area section-py-130">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <table class="table cart__table">
+              <thead>
+                <tr>
+                  <th class="product__thumb">&nbsp;</th>
+                  <th class="product__name">Product</th>
+                  <th class="product__price">Price</th>
+                  <th class="product__quantity">Quantity</th>
+                  <th class="product__subtotal">Subtotal</th>
+                  <th class="product__remove">&nbsp;</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for product in products %}
+                  <tr>
+                    <td class="product__thumb">
+                      <a href="shop-details.html"><img src="{{ product.product_image.url }}" alt="" /></a>
+                    </td>
+                    <td class="product__name">{{ product.name }}</td>
+                    <td class="product__price">${{ product.price }}</td>
+                    {% comment %} <td class="product__quantity">
+                      <div class="quickview-cart-plus-minus">
+                        <input type="text" value="1" />
+                      </div>
+                    </td> {% endcomment %}
+                    <td class="product__subtotal">${{ product.price }}</td>
+                    <td class="product__remove">
+                      <a href="{% url 'backend:remove_from_cart' product.id %}">×</a>
+                    </td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+          <div class="col-lg-4">
+            <div class="cart__collaterals-wrap">
+              <h2 class="title">Cart totals</h2>
+              <ul class="list-wrap">
+                <li>
+                  Subtotal <span>${{ total }}</span>
+                </li>
+                <li>
+                  Total <span class="amount">${{ total }}</span>
+                </li>
+              </ul>
+              <a href="{% url 'backend:checkout' %}" class="btn btn-sm">Proceed to checkout</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- cart-area-end -->
+  </main>
+  <!-- main-area-end -->
+{% endblock %}

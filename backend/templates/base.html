@@ -67,16 +67,16 @@
                         <a href="{% url 'backend:home' %}" class="section-link">Home</a>
                       </li>
                       <li>
-                        <a href="#ingredient" class="section-link">Ingredient</a>
+                        <a href="{% url 'backend:home' %}#ingredient" class="section-link">Ingredient</a>
                       </li>
                       <li>
-                        <a href="#supplement" class="section-link">Products</a>
+                        <a href="{% url 'backend:home' %}#supplement" class="section-link">Products</a>
                       </li>
                       <li>
-                        <a href="#feature" class="section-link">Benefits</a>
+                        <a href="{% url 'backend:home' %}#feature" class="section-link">Benefits</a>
                       </li>
                       <li>
-                        <a href="" class="section-link">Shop</a>
+                        <a href="{% url 'backend:shop' %}" class="section-link">Shop</a>
                       </li>
                       <li class="menu-item-has-children">
                         <a href="#testimonies" class="section-link">Testimonies</a>
@@ -84,10 +84,16 @@
                       <li>
                         <a href="{% url 'backend:contact' %}">contacts</a>
                       </li>
+                      <li class="header-shop-cart header-action d-none d-sm-block">
+                        <a href="{% url 'backend:cart' %}" class="cart-count">
+                          <i class="flaticon-shopping-cart"></i>
+                          <span class="mini-cart-count">{{ cart_count }}</span>
+                        </a>
+                      </li>
                     </ul>
                   </div>
                   <div class="header-btn d-none d-sm-block">
-                    <a href="#" class="tg-btn">Order Now</a>
+                    <a href="{% url 'backend:shop' %}" class="tg-btn">Order Now</a>
                   </div>
                 </nav>
               </div>
@@ -107,6 +113,7 @@
         <div class="nav-logo">
           <a href="index.html"><img src="{% static 'assets/img/logo/logo_black.png' %}" alt="" height="55px" /></a>
         </div>
+
         <div class="menu-outer">
           <!-- Here Menu Will Come Automatically Via Javascript / Same Menu as in Header -->
         </div>

@@ -19,7 +19,7 @@
             <h2 class="title wow fadeInUp" data-wow-delay=".4s">Healing Rooted<br /> in Nature</h2>
             <p class="wow fadeInUp" data-wow-delay=".6s">Discover pure herbal remedies crafted to restore balance, vitality, and wellness.</p>
             <div class="tg-banner-btn wow fadeInUp" data-wow-delay=".8s">
-              <a href="shop-details.html" class="tg-btn">purchase now</a>
+              <a href="{% url 'backend:shop' %}" class="tg-btn">purchase now</a>
             </div>
           </div>
         </div>
@@ -144,124 +144,26 @@
       </div>
       <div class="tg-shop-wrapper">
         <div class="row justify-content-center">
-          <div class="col-lg-4 col-md-6 col-sm-9">
-            <div class="tg-shop-item text-center">
-              <div class="tg-shop-thumb">
-                <span class="new">New</span>
-                <a href="shop-details.html"><img src="{% static 'assets/img/products/cancer.png' %}" alt="img" /></a>
-                <div class="tg-shop-action">
-                  <a href="shop-details.html" class="action-item"><i class="far fa-heart"></i></a>
-                  <a href="cart.html" class="action-item"><i class="flaticon-shopping-cart-1"></i></a>
-                  <a href="shop-details.html" class="action-item"><i class="flaticon-search"></i></a>
+          {% for item in items %}
+            <div class="col-lg-4 col-md-6 col-sm-9">
+              <div class="tg-shop-item text-center">
+                <div class="tg-shop-thumb">
+                  <span class="new">New</span>
+                  <a href="#"><img src="{{ item.product_image.url }}" alt="img" /></a>
+                  <div class="tg-shop-action">
+                    <a href="{% url 'backend:add_to_cart' item.pk %}" class="action-item"><i class="flaticon-shopping-cart-1"></i></a>
+                  </div>
                 </div>
-              </div>
-              <div class="tg-shop-content">
-                <div class="tg-shop-cat">
-                  <a href="shop.html">Herbal Care</a>
+                <div class="tg-shop-content">
+                  <div class="tg-shop-cat">
+                    <a href="shop.html">Herbal Care</a>
+                  </div>
+                  <h4 class="title"><a href="#">{{ item.name }}</a></h4>
+                  <div class="tg-shop-price">${{ item.price }}</div>
                 </div>
-                <h4 class="title"><a href="shop-details.html">Herbal Cancer Cure</a></h4>
-                <div class="tg-shop-price">$24.99</div>
               </div>
             </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-9">
-            <div class="tg-shop-item text-center">
-              <div class="tg-shop-thumb">
-                <span class="discount">-45%</span>
-                <a href="shop-details.html"><img src="{% static 'assets/img/products/diabetes.png' %}" alt="img" /></a>
-                <div class="tg-shop-action">
-                  <a href="shop-details.html" class="action-item"><i class="far fa-heart"></i></a>
-                  <a href="cart.html" class="action-item"><i class="flaticon-shopping-cart-1"></i></a>
-                  <a href="shop-details.html" class="action-item"><i class="flaticon-search"></i></a>
-                </div>
-              </div>
-              <div class="tg-shop-content">
-                <div class="tg-shop-cat">
-                  <a href="shop.html">Herbal Care</a>
-                </div>
-                <h4 class="title"><a href="shop-details.html">Herbal Diabetes Cure</a></h4>
-                <div class="tg-shop-price">$24.99</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-9">
-            <div class="tg-shop-item text-center">
-              <div class="tg-shop-thumb">
-                <a href="shop-details.html"><img src="{% static 'assets/img/products/erectile.png' %}" alt="img" /></a>
-                <div class="tg-shop-action">
-                  <a href="shop-details.html" class="action-item"><i class="far fa-heart"></i></a>
-                  <a href="cart.html" class="action-item"><i class="flaticon-shopping-cart-1"></i></a>
-                  <a href="shop-details.html" class="action-item"><i class="flaticon-search"></i></a>
-                </div>
-              </div>
-              <div class="tg-shop-content">
-                <div class="tg-shop-cat">
-                  <a href="shop.html">Herbal Care</a>
-                </div>
-                <h4 class="title"><a href="shop-details.html">Erectile Dysfunction</a></h4>
-                <div class="tg-shop-price">$24.99</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-9">
-            <div class="tg-shop-item text-center">
-              <div class="tg-shop-thumb">
-                <span class="discount">-45%</span>
-                <a href="shop-details.html"><img src="{% static 'assets/img/products/hpv.png' %}" alt="img" /></a>
-                <div class="tg-shop-action">
-                  <a href="shop-details.html" class="action-item"><i class="far fa-heart"></i></a>
-                  <a href="cart.html" class="action-item"><i class="flaticon-shopping-cart-1"></i></a>
-                  <a href="shop-details.html" class="action-item"><i class="flaticon-search"></i></a>
-                </div>
-              </div>
-              <div class="tg-shop-content">
-                <div class="tg-shop-cat">
-                  <a href="shop.html">Herbal Care</a>
-                </div>
-                <h4 class="title"><a href="shop-details.html">HPV Herbal Cure</a></h4>
-                <div class="tg-shop-price">$24.99</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-9">
-            <div class="tg-shop-item text-center">
-              <div class="tg-shop-thumb">
-                <a href="shop-details.html"><img src="{% static 'assets/img/products/staph.png' %}" alt="img" /></a>
-                <div class="tg-shop-action">
-                  <a href="shop-details.html" class="action-item"><i class="far fa-heart"></i></a>
-                  <a href="cart.html" class="action-item"><i class="flaticon-shopping-cart-1"></i></a>
-                  <a href="shop-details.html" class="action-item"><i class="flaticon-search"></i></a>
-                </div>
-              </div>
-              <div class="tg-shop-content">
-                <div class="tg-shop-cat">
-                  <a href="shop.html">Herbal Care</a>
-                </div>
-                <h4 class="title"><a href="shop-details.html">Staph Bacteria</a></h4>
-                <div class="tg-shop-price">$24.99</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-9">
-            <div class="tg-shop-item text-center">
-              <div class="tg-shop-thumb">
-                <span class="new">New</span>
-                <a href="shop-details.html"><img src="{% static 'assets/img/products/staph_2.png' %}" alt="img" /></a>
-                <div class="tg-shop-action">
-                  <a href="shop-details.html" class="action-item"><i class="far fa-heart"></i></a>
-                  <a href="cart.html" class="action-item"><i class="flaticon-shopping-cart-1"></i></a>
-                  <a href="shop-details.html" class="action-item"><i class="flaticon-search"></i></a>
-                </div>
-              </div>
-              <div class="tg-shop-content">
-                <div class="tg-shop-cat">
-                  <a href="shop.html">Herbal Care</a>
-                </div>
-                <h4 class="title"><a href="shop-details.html">Staph Bacteria Cure</a></h4>
-                <div class="tg-shop-price">$24.99</div>
-              </div>
-            </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
     </div>
