@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="{% static 'assets/css/default.css' %}" />
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
     <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Pre-loader-start -->
@@ -59,7 +60,7 @@
               <div class="menu-wrap">
                 <nav class="menu-nav">
                   <div class="logo">
-                    <a href="index.html"><img src="{% static 'assets/img/logo/logo_black.png' %}" alt="Logo" height="55px" /></a>
+                    <a href="{% url 'backend:home' %}"><img src="{% static 'assets/img/logo/logo_black.png' %}" alt="Logo" height="55px" /></a>
                   </div>
                   <div class="navbar-wrap main-menu d-none d-xl-flex">
                     <ul class="navigation">
@@ -111,7 +112,7 @@
           <i class="fas fa-times"></i>
         </div>
         <div class="nav-logo">
-          <a href="index.html"><img src="{% static 'assets/img/logo/logo_black.png' %}" alt="" height="55px" /></a>
+          <a href="{% url 'backend:home' %}"><img src="{% static 'assets/img/logo/logo_black.png' %}" alt="" height="55px" /></a>
         </div>
 
         <div class="menu-outer">
@@ -256,9 +257,11 @@
     <script src="{% static 'assets/js/ajax-form.js' %}"></script>
     <script src="{% static 'assets/js/wow.min.js' %}"></script>
     <script src="{% static 'assets/js/main.js' %}"></script>
+    <script src="https://kit.fontawesome.com/82d49a62e0.js" crossorigin="anonymous"></script>
     <script>
       SVGInject(document.querySelectorAll('img.injectable'))
     </script>
+    <a href="https://wa.me/message/TNPGQWEY7NGSP1" target="_blank" class="whatsapp-float"><i class="fa-brands fa-whatsapp"></i></a>
   </body>
 
   <!-- Mirrored from themegenix.net/html/suxnix/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 01:59:26 GMT -->
